@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velosi (M) SDN BHD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #666;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #666;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+        p {
+            border: 2px solid black;
+            outline: #4084dd solid 5px;
+            margin: auto;  
+            padding: 10px;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <section id="Home">
+        <img src="velosi-logo.png" alt="Logo rasmi syarikat" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        </section>
+    </header>
+
+    <nav>
+        <a onclick="scrollToSection('Home')" style="cursor: pointer;">Home</a>
+        <a onclick="scrollToSection('About')" style="cursor: pointer;">About</a>
+        <a onclick="scrollToSection('Services')" style="cursor: pointer;">Services</a>
+        <a onclick="scrollToSection('Contact')" style="cursor: pointer;">Contact</a>
+        <a onclick="scrollToSection('')" style="cursor: pointer;"></a>
+
+    </nav>
+
+    <section id="Picture">
+    <img src="velosi-paka.png" alt="Pejabat di Paka" style="max-width: 30%; height: auto; display: block; margin: 0 auto;">
+        <br>
+        <div style="text-align: center;">Pejabat Velosi (M) SDN BHD di Paka
+        </div>
+    </section>
+
+    <section id="About">
+        
+        <br>
+        <br>
+        <h2>Our Vision</h2>
+        <div style="text-align: center;">To become the world’s premier Asset Integrity, HSE & Engineering Consultancy
+        </div>
+        <br>
+        <br>
+        <h2>Our Mission</h2>
+        <div style="text-align: center;">To create value for our clients by providing tailored Asset Integrity, HSE and Engineering Solutions to complex problems through a renowned panel of engineering professionals
+        </div>
+        <br>
+        <br>
+        <h2>About Us</h2>
+        <div style="text-align: center;">Velosi has more than 41+ years of experience helping clients by providing a one-stop center for complete Asset Integrity Management, HSE and Engineering Services to leading oil and gas companies worldwide. We operate globally through our associated offices in Middle-East, Africa and Asia. Velosi can offer you a complete asset integrity management and software solution.
+        </div>
+        <br>
+        <br>
+        <div style="text-align: center;">The strength of our approach comes from offering a multiregional service while meeting local needs. Velosi achieves this because we operate in selected world’s major established and emerging markets. From your local offices, you will be able to easily access our network to receive the service that you need. This approach provides a solution to companies who are trying to control operations in unfamiliar territories remotely. By cutting through barriers, we provide companies with the highest levels of commitment and personalized services.
+        </div>
+        <br>
+        <br>
+        <br>
+        <p>Velosi has developed a comprehensive Asset Integrity Management software; VAIL-Plant, that can be tailored to fulfill the specific needs of Energy companies worldwide.
+        </p>
+        <br>
+        <br>
+    </section>
+
+    <section id="Services">
+        <br>
+        <br>
+        <h2>Our Services</h2>
+        <ul style="list-style-type:circle">
+            <li>Penetrant Testing (PT)</li> 
+            <br>
+            <li>Magnetic Particle Testing (MPT)</li> 
+            <br>
+            <li>Ultrasonic Testing (UT)</li> 
+            <br>
+            <li>Radiograhpic Testing (RT)</li> 
+            <br>
+            <li>IRATA ()</li> 
+            <br>
+            <br>
+            <div><a href="https://velosiaims.com/services/">Other services explained in details</a></div>
+        </ul>
+    </section>
+
+    <section id="Contact">
+        <br>
+        <br>
+        <h2>Contact Us</h2>
+        <br>
+        <p>Phone: +609-8279999</p>
+        <br>
+        <br>
+        <p>E-mail: info@velosi.com.my</p>
+        <br>
+        <br>
+        <p>Address: Plot 234, No. 55, Pusast Niaga Paka, 23100 Paka, Dungun, Terengganu Darul Iman</p>
+        <br>
+        <br>
+        <br>
+        <br>
+    </section>
+
+    <footer>
+        &copy; 2024 Velosi (M) SDN BHD. All rights reserved.
+        <div class="back-to-top" onclick="scrollToTop()">Back To Top</div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                document.querySelector('.back-to-top').style.display = "block";
+            } else {
+                document.querySelector('.back-to-top').style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
