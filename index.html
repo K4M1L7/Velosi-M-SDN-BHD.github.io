@@ -157,6 +157,59 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+/*bwh ni utk tab gallery image
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.5; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 8px;
+  left: 350px;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 8px;
+  right: 280px;
+  color: black;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+
     </style>
 </head>
 <body>
@@ -176,7 +229,26 @@ img {vertical-align: middle;}
     </nav>
 
     <section id="Home">
-        
+        <div>
+        <h2 style="text-align:center">International Organization for Standardization (ISO)</h2>
+        <div style="text-align:center"> The International Organization for Standardization (ISO) is a worldwide group that makes rules to ensure products and services are safe and good quality.
+        These rules cover many areas, like how things are made, how businesses manage the environment, and how they keep information secure.
+        Following ISO rules can help companies show they're trustworthy, reach new customers, and make their operations better.
+        </div>
+        <br>
+        <h2 style="text-align:center">Benefits of ISO</h2>
+        <ul style="background: #3399ff; padding: 15px;">
+        <li style="background: #cce5ff; color: darkblue; margin: 10px;">International, expert consensus on state of the art practices for quality and enviroment management</li>
+        <li style="background: #cce5ff; color: darkblue; margin: 10px;">Common language for dealing with customers and suppliers worldwide</li>
+        <li style="background: #cce5ff; color: darkblue; margin: 10px;">Increase efficiency and effectiveness</li>
+        <li style="background: #cce5ff; color: darkblue; margin: 10px;">Model for continual improvement</li>
+        <li style="background: #cce5ff; color: darkblue; margin: 10px;">Model dor satisfying customers and other stakeholders</li>
+        <li style="background: #cce5ff; color: darkblue; margin: 10px;">Build quality into products and services from design onwards</li>
+        <li style="background: #cce5ff; color: darkblue; margin: 10px;">Address enviromental concerns of customers and public, and comply with government regulations</li>
+        <li style="background: #cce5ff; color: darkblue; margin: 10px;">Integrate with global economy</li>
+        </ul>
+
+        </div>
     </section>
 
     <section id="Picture">
@@ -215,6 +287,58 @@ img {vertical-align: middle;}
         </p>
         <br>
         <br>
+        <div class="row" style="* { box-sizing: border-box; }">
+        <h2>Velosi Certificate</h2>
+        <div class="column" style="float: left; width: 33.33%; padding: 5px;">
+        <img src="Cert1.jpeg" style="display: block; margin: 0 auto;" width="400" height="400">
+        </div>
+        <div class="column" style="float: left; width: 33.33%; padding: 5px;">
+        <img src="Cert2.jpeg" style="display: block; margin: 0 auto;" width="400" height="400">
+        </div>
+        <div class="column" style="float: left; width: 33.33%; padding: 5px;">
+        <img src="Cert3.jpeg" style="display: block; margin: 0 auto;" width="400" height="400">
+        </div>
+        <div style="clear: both;"></div>
+        </div>
+        <br>
+        <br>
+    </section>
+
+    <section id="Policy">
+        <br>
+        <br>
+        <div style="text-align:center">
+        <h2>Our Policy</h2>
+        <a>Click on the images below to expand it:</a>
+        </div>
+        <br>
+        <!-- Slideshow for Policy -->
+        <div class="row">
+            <div class="column">
+            <img src="Policy-1.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+            <img src="Policy-2.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+            <img src="Policy-3.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+            <img src="Policy-4.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+            <img src="Policy-5.jpeg" width="250" height="250" style="display: block; margin-left: 118%; margin-right: 118%;" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+            <img src="Policy-6.jpeg" width="250" height="250" style="display: block; margin-left: 118%; margin-right: 118%;" onclick="myFunction(this);">
+            </div>
+        </div>
+
+        <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
+            <div id="imgtext"></div>
+        </div>
         <br>
         <br>
     </section>
@@ -223,7 +347,9 @@ img {vertical-align: middle;}
         <br>
         <br>
         <h2>Our Services</h2>
-    <ul style="list-style-type:circle">
+        <br>
+        <br>
+    <ol style="list-style-type:circle">
         <li>
             <h3>Penetrant Testing (PT)</h3>
             <button onclick="showService('penetrant')">Show Details</button>
@@ -412,11 +538,12 @@ img {vertical-align: middle;}
         </li>
         <br>
         <br>
-    </ul>
+    </ol>
         <br>
         <br>
-        <div><a href="https://velosiaims.com/services/" target="_blank">Other services explained in details</a></div>
-        </ul>
+        <div><a href="https://velosiaims.com/services/" target="_blank" style="border: 5px solid black; margin: auto;  padding: 5px;" >Other services explained in details</a></div>
+        <br>
+        <br>
     </section>
 
     <section id="Contact">
@@ -522,6 +649,15 @@ img {vertical-align: middle;}
             serviceInfo.style.display = "none";
         }
     }
+
+
+    function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
 </script>
 
 
