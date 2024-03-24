@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="Velosi Paka">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Velosi (M) SDN BHD</title>
@@ -66,11 +67,101 @@
             text-align: center;
         }
 
+        * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
     </style>
 </head>
 <body>
     <header>
-        <section id="Home">
+        <section id="Panel">
         <img src="velosi-logo.png" alt="Logo rasmi syarikat" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
         </section>
     </header>
@@ -78,11 +169,15 @@
     <nav>
         <a onclick="scrollToSection('Home')" style="cursor: pointer;">Home</a>
         <a onclick="scrollToSection('About')" style="cursor: pointer;">About</a>
+        <a onclick="scrollToSection('Policy')" style="cursor: pointer;">Policy</a>
         <a onclick="scrollToSection('Services')" style="cursor: pointer;">Services</a>
         <a onclick="scrollToSection('Contact')" style="cursor: pointer;">Contact</a>
-        <a onclick="scrollToSection('')" style="cursor: pointer;"></a>
 
     </nav>
+
+    <section id="Home">
+        
+    </section>
 
     <section id="Picture">
     <img src="velosi-paka.png" alt="Pejabat di Paka" style="max-width: 30%; height: auto; display: block; margin: 0 auto;">
@@ -92,25 +187,26 @@
     </section>
 
     <section id="About">
-        
         <br>
         <br>
         <h2>Our Vision</h2>
-        <div style="text-align: center;">To be and to remain the global leader and most trusted & reliable service provider in the Asset Integrity Management in Oil & Gas Industry.
+        <div style="text-align: center;">To become the world’s premier Asset Integrity, HSE & Engineering Consultancy
         </div>
         <br>
         <br>
         <h2>Our Mission</h2>
-        <div style="text-align: center;">To work with the best in the Asset Integrity Management business and to complement our expertise and upgradation with the latest technologies to serve our customers without compromise in both safety and quality aspects.
+        <div style="text-align: center;">To create value for our clients by providing tailored Asset Integrity, HSE and Engineering Solutions to complex problems through a renowned panel of engineering professionals
         </div>
         <br>
         <br>
         <h2>About Us</h2>
-        <div style="text-align: center;">Velosi has more than 41+ years of experience helping clients by providing a one-stop center for complete Asset Integrity Management, HSE and Engineering Services to leading oil and gas companies worldwide. We operate globally through our associated offices in Middle-East, Africa and Asia. Velosi can offer you a complete asset integrity management and software solution.
+        <div style="text-align: center;">Velosi has more than 41+ years of experience helping clients by providing a one-stop center for complete Asset Integrity Management, HSE and Engineering Services to leading oil and gas companies worldwide. We operate globally through our associated offices in Middle-East, Africa and Asia.
+        Velosi can offer you a complete asset integrity management and software solution.
         </div>
         <br>
         <br>
-        <div style="text-align: center;">The strength of our approach comes from offering a multiregional service while meeting local needs. Velosi achieves this because we operate in selected world’s major established and emerging markets. From your local offices, you will be able to easily access our network to receive the service that you need. This approach provides a solution to companies who are trying to control operations in unfamiliar territories remotely. By cutting through barriers, we provide companies with the highest levels of commitment and personalized services.
+        <div style="text-align: center;">The strength of our approach comes from offering a multiregional service while meeting local needs. Velosi achieves this because we operate in selected world’s major established and emerging markets. From your local offices, you will be able to easily access our network to receive the service that you need.
+        This approach provides a solution to companies who are trying to control operations in unfamiliar territories remotely. By cutting through barriers, we provide companies with the highest levels of commitment and personalized services.
         </div>
         <br>
         <br>
@@ -119,25 +215,207 @@
         </p>
         <br>
         <br>
+        <br>
+        <br>
     </section>
 
     <section id="Services">
         <br>
         <br>
         <h2>Our Services</h2>
-        <ul style="list-style-type:circle">
-            <li>Penetrant Testing (PT)</li> 
-            <br>
-            <li>Magnetic Particle Testing (MPT)</li> 
-            <br>
-            <li>Ultrasonic Testing (UT)</li> 
-            <br>
-            <li>Radiograhpic Testing (RT)</li> 
-            <br>
-            <li>Industrial Rope Access Trade Association (IRATA)</li> 
-            <br>
-            <br>
-            <div><a href="https://velosiaims.com/services/">Other services explained in details</a></div>
+    <ul style="list-style-type:circle">
+        <li>
+            <h3>Penetrant Testing (PT)</h3>
+            <button onclick="showService('penetrant')">Show Details</button>
+            <div id="penetrant-info" style="display:none;">
+                <div>
+                Penetrant Testing (PT) is a way to find flaws on material surfaces without damaging them. It involves applying a colored liquid that seeps into any cracks or holes, drawn in by capillary action, which is like a liquid's ability to sneak into tight spaces.
+                After some time, excess liquid is wiped away, and a powder is added to draw out the colored liquid from any flaws.
+                This makes the flaws visible, helping to ensure the material's quality and safety.   
+                </div>
+                <br>
+                <br>
+                <!-- Slideshow for Penetrant Testing -->
+                <div class="slideshow-container">
+                <div class="penetrantSlides fade">
+                    <img src="PT1.jpeg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="penetrantSlides fade">
+                    <img src="PT2.jpeg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="penetrantSlides fade">
+                    <img src="PT3.jpeg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="penetrantSlides fade">
+                    <img src="PT4.jpeg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="penetrantSlides fade">
+                    <img src="PT5.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                </div>
+                <br>
+                <br>
+                <a href="https://www.youtube.com/watch?v=qOcOe1Hfrq0&t=41s&ab_channel=XpertEngineeringSolutionSdnBhd" target="_blank">
+                <img src="logo-youtube.jfif" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="125" height="100" alt="YouTube Link"></a>
+            </div>
+        </li>
+        <br>
+        <br>
+        <li>
+            <h3>Magnetic Particle Testing (MPT)</h3>
+            <button onclick="showService('magnetic')">Show Details</button>
+            <div id="magnetic-info" style="display:none;">
+                <div>
+                Magnetic Particle Testing (MPT)/(MT), also known as Magnetic Particle inspection (MPI), is a non-destructive testing (NDT) method used for detecting surface and near-surface flaws in ferromagnetic materials.
+                It relies on the principle that magnetic fields are distorted by the presence of a discontinuity or defect in the material.
+                MT is commonly used in various industries for quality control and inspection of components.
+                </div>
+                <br>
+                <br>
+                <!-- Slideshow for Magnetic Testing -->
+                <div class="slideshow-container">
+                <div class="magneticSlides fade">
+                    <img src="MT1.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="magneticSlides fade">
+                    <img src="MT2.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="magneticSlides fade">
+                    <img src="MT3.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="magneticSlides fade">
+                    <img src="MT4.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="magneticSlides fade">
+                    <img src="MT5.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                </div>
+                <br>
+                <br>
+                <a href="https://www.youtube.com/watch?v=6PAERlvMDi8&ab_channel=XpertEngineeringSolutionSdnBhd" target="_blank">
+                <img src="logo-youtube.jfif" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="125" height="100" alt="YouTube Link"></a>
+            </div>
+        </li>
+        <br>
+        <br>
+        <li>
+            <h3>Ultrasonic Testing (UT)</h3>
+            <button onclick="showService('ultrasonic')">Show Details</button>
+            <div id="ultrasonic-info" style="display:none;">
+                <div>
+                Ultrasonic Testing (UT) is a method to check materials for flaws without causing damage. It uses high-frequency sound waves sent into the material. When these waves hit any changes like cracks or boundaries, they bounce back.
+                A special device then analyzes these echoes to find and assess any flaws. UT is commonly used in industries like manufacturing and construction to check for defects in materials like metal and plastic.
+                It's popular because it's precise and can find flaws deep inside materials.
+                </div>
+                <br>
+                <br>
+                <!-- Slideshow for Ultrasonic Testing -->
+                <div class="slideshow-container">
+                <div class="ultrasonicSlides fade">
+                    <img src="UT1.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="ultrasonicSlides fade">
+                    <img src="UT2.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="ultrasonicSlides fade">
+                    <img src="UT3.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="ultrasonicSlides fade">
+                    <img src="UT4.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="ultrasonicSlides fade">
+                    <img src="UT5.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                </div>
+                <br>
+                <br>
+                <a href="https://www.youtube.com/watch?v=UM6XKvXWVFA&t=417s&ab_channel=MaterialsScience2000" target="_blank">
+                <img src="logo-youtube.jfif" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="125" height="100" alt="YouTube Link"></a>
+            </div>
+        </li>
+        <br>
+        <br>
+        <li>
+            <h3>Radiographic Testing (RT)</h3>
+            <button onclick="showService('radiographic')">Show Details</button>
+            <div id="radiographic-info" style="display:none;">
+                <div>
+                Radiographic Testing (RT) is a non-destructive testing method used to examine the internal structure of materials for flaws or defects. It works by passing X-rays or gamma rays through the material being tested onto a film or detector placed on the opposite side.
+                Areas of the material that are thicker or denser, such as welds or internal defects, will absorb more of the radiation and appear as darker areas on the film or detector. By analyzing these images, technicians can detect defects like cracks, voids, or inclusions within the material.
+                RT is commonly used in industries such as aerospace, construction, and manufacturing to ensure the integrity and safety of critical components, welds, and structures.
+                </div>
+                <br>
+                <br>
+                <!-- Slideshow for Radiographic Testing -->
+                <div class="slideshow-container">
+                <div class="radiographicSlides fade">
+                    <img src="RT1.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="radiographicSlides fade">
+                    <img src="RT2.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="radiographicSlides fade">
+                    <img src="RT3.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="radiographicSlides fade">
+                    <img src="RT4.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="radiographicSlides fade">
+                    <img src="RT5.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="radiographicSlides fade">
+                    <img src="RT6.jpg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                </div>
+                <br>
+                <br>
+                <a href="https://www.youtube.com/watch?v=LEvltIo4NTA&t=342s&ab_channel=XpertEngineeringSolutionSdnBhd" target="_blank">
+                <img src="logo-youtube.jfif" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="125" height="100" alt="YouTube Link"></a>
+            </div>
+        </li>
+        <br>
+        <br>
+        <li>
+            <h3>Industrial Rope Access Trade Association (IRATA)</h3>
+            <button onclick="showService('irata')">Show Details</button>
+            <div id="irata-info" style="display:none;">
+                <div>
+                The Industrial Rope Access Trade Association (IRATA) is an international organization that sets standards and provides training for industrial rope access technicians. These technicians use ropes and specialized equipment to work at heights and in difficult-to-reach areas, such as offshore structures, bridges, and industrial facilities.
+                IRATA promotes safety, professionalism, and best practices within the rope access industry by establishing guidelines for training, equipment inspection, and operational procedures.
+                Members of IRATA, including training companies and rope access technicians, adhere to these standards to ensure safe and efficient work at height.
+                </div>
+                <br>
+                <br>
+                <!-- Slideshow for Industrial Rope Access Trade Association (IRATA) -->
+                <div class="slideshow-container">
+                <div class="irataSlides fade">
+                    <img src="IRATA1.jpeg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="irataSlides fade">
+                    <img src="IRATA2.jpeg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="irataSlides fade">
+                    <img src="IRATA3.jpeg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="irataSlides fade">
+                    <img src="IRATA4.jpeg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                <div class="irataSlides fade">
+                    <img src="IRATA5.jpeg" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="500" height="400">
+                </div>
+                </div>
+                <br>
+                <br>
+                <a href="https://youtube.com/playlist?list=PLtEGk8p77dRQk6Fqpb_Vt4pdCJrwe6415&si=QBYhCtY2SQjQvJpk" target="_blank">
+                <img src="logo-youtube.jfif" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="125" height="100" alt="YouTube Link"></a>
+            </div>
+        </li>
+        <br>
+        <br>
+    </ul>
+        <br>
+        <br>
+        <div><a href="https://velosiaims.com/services/">Other services explained in details</a></div>
         </ul>
     </section>
 
@@ -181,6 +459,71 @@
             }
         }
     </script>
+
+
+
+<script>
+    // Initialize slide index for each service
+    var slideIndexPenetrant = 0;
+    var slideIndexMagnetic = 0;
+    var slideIndexUltrasonic = 0;
+    var slideIndexRadiographic = 0;
+    var slideIndexIRATA = 0;
+    // Add more slide indexes for other services if needed
+
+    // Call showSlides function for each service
+    showSlides('penetrantSlides');
+    showSlides('magneticSlides');
+    showSlides('ultrasonicSlides');
+    showSlides('radiographicSlides');
+    showSlides('irataSlides');
+    // Call showSlides for other services if needed
+
+    function showSlides(className) {
+    var i;
+    var slides = document.getElementsByClassName(className);
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    if (className === 'penetrantSlides') {
+        slideIndexPenetrant++;
+        if (slideIndexPenetrant > slides.length) {slideIndexPenetrant = 1}    
+        slides[slideIndexPenetrant-1].style.display = "block";  
+        setTimeout(function() {showSlides(className);}, 2000); // Change image every 2 seconds
+    } else if (className === 'magneticSlides') {
+        slideIndexMagnetic++;
+        if (slideIndexMagnetic > slides.length) {slideIndexMagnetic = 1}    
+        slides[slideIndexMagnetic-1].style.display = "block";  
+        setTimeout(function() {showSlides(className);}, 2000); // Change image every 2 seconds
+    } else if (className === 'ultrasonicSlides') {
+        slideIndexUltrasonic++;
+        if (slideIndexUltrasonic > slides.length) {slideIndexUltrasonic = 1}    
+        slides[slideIndexUltrasonic-1].style.display = "block";  
+        setTimeout(function() {showSlides(className);}, 2000); // Change image every 2 seconds
+    } else if (className === 'radiographicSlides') {
+        slideIndexRadiographic++;
+        if (slideIndexRadiographic > slides.length) {slideIndexRadiographic = 1}    
+        slides[slideIndexRadiographic-1].style.display = "block";  
+        setTimeout(function() {showSlides(className);}, 2000); // Change image every 2 seconds
+    } else if (className === 'irataSlides') {
+        slideIndexIRATA++;
+        if (slideIndexIRATA > slides.length) {slideIndexIRATA = 1}    
+        slides[slideIndexIRATA-1].style.display = "block";  
+        setTimeout(function() {showSlides(className);}, 2000); // Change image every 2 seconds
+    }
+        // Add similar block for other services if needed
+    }
+
+    function showService(serviceName) {
+        var serviceInfo = document.getElementById(serviceName + "-info");
+        if (serviceInfo.style.display === "none") {
+            serviceInfo.style.display = "block";
+        } else {
+            serviceInfo.style.display = "none";
+        }
+    }
+</script>
+
 
 </body>
 </html>
