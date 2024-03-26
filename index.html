@@ -58,7 +58,7 @@
         p {
             border: 3px solid black;
             outline: #4084dd solid 5px;
-            margin: auto;  
+            margin: auto;
             padding: 10px;
             text-align: center;
         }
@@ -114,7 +114,7 @@ img {vertical-align: middle;}
   animation-duration: 1.5s;
 }
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 /* On smaller screens, decrease text size */
@@ -130,8 +130,9 @@ img {vertical-align: middle;}
 }
 /* Style the images inside the grid */
 .column img {
-  opacity: 0.5; 
-  cursor: pointer; 
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s;
 }
 .column img:hover {
   opacity: 1;
@@ -147,21 +148,15 @@ img {vertical-align: middle;}
   position: relative;
   display: none;
 }
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 8px;
-  left: 350px;
-  color: whitesmoke;
-  font-size: 20px;
-}
+
 /* Closable button inside the expanded image */
 .closebtn {
   position: absolute;
   top: 8px;
-  right: 280px;
+  right: 200px;
   color: black;
-  font-size: 35px;
+  font-size: 55px;
+  font-weight: bold;
   cursor: pointer;
 }
 /* coding bwh ni utk images popup */
@@ -178,7 +173,7 @@ img {vertical-align: middle;}
   display: inline; /* Make images display inline */
 }
 .image-container img:hover {
-  opacity: 0.7;
+  opacity: 0.3;
 }
 /* The Modal (background) */
 .modal {
@@ -203,27 +198,27 @@ img {vertical-align: middle;}
 }
 
 /* Add Animation */
-.modal-content, #caption {  
+.modal-content, #caption {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
   animation-duration: 0.6s;
 }
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
+  from {-webkit-transform:scale(0)}
   to {-webkit-transform:scale(1)}
 }
 @keyframes zoom {
-  from {transform:scale(0)} 
+  from {transform:scale(0)}
   to {transform:scale(1)}
 }
 /* The Close Button */
 .close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 5px;
+  right: 200px;
   color: #f1f1f1;
-  font-size: 40px;
+  font-size: 70px;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -322,12 +317,14 @@ img {vertical-align: middle;}
         <br>
         <br>
         <h2>About Us</h2>
-        <div style="text-align: center;">Velosi has more than 41+ years of experience helping clients by providing a one-stop center for complete Asset Integrity Management, HSE and Engineering Services to leading oil and gas companies worldwide. We operate globally through our associated offices in Middle-East, Africa and Asia.
+        <div style="text-align: center;">Velosi has more than 41+ years of experience helping clients by providing a one-stop center for complete Asset Integrity Management, HSE and Engineering Services to leading oil and gas companies worldwide.
+        We operate globally through our associated offices in Middle-East, Africa and Asia.
         Velosi can offer you a complete asset integrity management and software solution.
         </div>
         <br>
         <br>
-        <div style="text-align: center;">The strength of our approach comes from offering a multiregional service while meeting local needs. Velosi achieves this because we operate in selected world’s major established and emerging markets. From your local offices, you will be able to easily access our network to receive the service that you need.
+        <div style="text-align: center;">The strength of our approach comes from offering a multiregional service while meeting local needs. Velosi achieves this because we operate in selected world’s major established and emerging markets.
+        From your local offices, you will be able to easily access our network to receive the service that you need.
         This approach provides a solution to companies who are trying to control operations in unfamiliar territories remotely. By cutting through barriers, we provide companies with the highest levels of commitment and personalized services.
         </div>
         <br>
@@ -401,12 +398,13 @@ img {vertical-align: middle;}
         <li>
             <h3>Penetrant Testing (PT)</h3>
             <button onclick="toggleServiceDetails('penetrant', true)">Show Details</button>
-            <button onclick="toggleServiceDetails('penetrant', false)" style="display: none;">Hide Details</button>         
+            <button onclick="toggleServiceDetails('penetrant', false)" style="display: none;">Hide Details</button>
                 <div id="penetrant-info" style="display:none;">
                 <div>
-                Penetrant Testing (PT) is a way to find flaws on material surfaces without damaging them. It involves applying a colored liquid that seeps into any cracks or holes, drawn in by capillary action, which is like a liquid's ability to sneak into tight spaces.
+                Penetrant Testing (PT) is a way to find flaws on material surfaces without damaging them.
+                It involves applying a colored liquid that seeps into any cracks or holes, drawn in by capillary action, which is like a liquid's ability to sneak into tight spaces.
                 After some time, excess liquid is wiped away, and a powder is added to draw out the colored liquid from any flaws.
-                This makes the flaws visible, helping to ensure the material's quality and safety.   
+                This makes the flaws visible, helping to ensure the material's quality and safety.
                 </div>
                 <br>
                 <br>
@@ -440,7 +438,7 @@ img {vertical-align: middle;}
         <li>
             <h3>Magnetic Particle Testing (MPT)</h3>
             <button onclick="toggleServiceDetails('magnetic', true)">Show Details</button>
-            <button onclick="toggleServiceDetails('magnetic', false)" style="display: none;">Hide Details</button>         
+            <button onclick="toggleServiceDetails('magnetic', false)" style="display: none;">Hide Details</button>
             <div id="magnetic-info" style="display:none;">
                 <div>
                 Magnetic Particle Testing (MPT)/(MT), also known as Magnetic Particle inspection (MPI), is a non-destructive testing (NDT) method used for detecting surface and near-surface flaws in ferromagnetic materials.
@@ -479,7 +477,7 @@ img {vertical-align: middle;}
         <li>
             <h3>Ultrasonic Testing (UT)</h3>
             <button onclick="toggleServiceDetails('ultrasonic', true)">Show Details</button>
-            <button onclick="toggleServiceDetails('ultrasonic', false)" style="display: none;">Hide Details</button>         
+            <button onclick="toggleServiceDetails('ultrasonic', false)" style="display: none;">Hide Details</button>
             <div id="ultrasonic-info" style="display:none;">
                 <div>
                 Ultrasonic Testing (UT) is a method to check materials for flaws without causing damage. It uses high-frequency sound waves sent into the material. When these waves hit any changes like cracks or boundaries, they bounce back.
@@ -518,11 +516,13 @@ img {vertical-align: middle;}
         <li>
             <h3>Radiographic Testing (RT)</h3>
             <button onclick="toggleServiceDetails('radiographic', true)">Show Details</button>
-            <button onclick="toggleServiceDetails('radiographic', false)" style="display: none;">Hide Details</button>         
+            <button onclick="toggleServiceDetails('radiographic', false)" style="display: none;">Hide Details</button>
             <div id="radiographic-info" style="display:none;">
                 <div>
-                Radiographic Testing (RT) is a non-destructive testing method used to examine the internal structure of materials for flaws or defects. It works by passing X-rays or gamma rays through the material being tested onto a film or detector placed on the opposite side.
-                Areas of the material that are thicker or denser, such as welds or internal defects, will absorb more of the radiation and appear as darker areas on the film or detector. By analyzing these images, technicians can detect defects like cracks, voids, or inclusions within the material.
+                Radiographic Testing (RT) is a non-destructive testing method used to examine the internal structure of materials for flaws or defects.
+                It works by passing X-rays or gamma rays through the material being tested onto a film or detector placed on the opposite side.
+                Areas of the material that are thicker or denser, such as welds or internal defects, will absorb more of the radiation and appear as darker areas on the film or detector.
+                By analyzing these images, technicians can detect defects like cracks, voids, or inclusions within the material.
                 RT is commonly used in industries such as aerospace, construction, and manufacturing to ensure the integrity and safety of critical components, welds, and structures.
                 </div>
                 <br>
@@ -560,10 +560,11 @@ img {vertical-align: middle;}
         <li>
             <h3>Industrial Rope Access Trade Association (IRATA)</h3>
             <button onclick="toggleServiceDetails('irata', true)">Show Details</button>
-            <button onclick="toggleServiceDetails('irata', false)" style="display: none;">Hide Details</button>         
+            <button onclick="toggleServiceDetails('irata', false)" style="display: none;">Hide Details</button>
             <div id="irata-info" style="display:none;">
                 <div>
-                The Industrial Rope Access Trade Association (IRATA) is an international organization that sets standards and provides training for industrial rope access technicians. These technicians use ropes and specialized equipment to work at heights and in difficult-to-reach areas, such as offshore structures, bridges, and industrial facilities.
+                The Industrial Rope Access Trade Association (IRATA) is an international organization that sets standards and provides training for industrial rope access technicians.
+                These technicians use ropes and specialized equipment to work at heights and in difficult-to-reach areas, such as offshore structures, bridges, and industrial facilities.
                 IRATA promotes safety, professionalism, and best practices within the rope access industry by establishing guidelines for training, equipment inspection, and operational procedures.
                 Members of IRATA, including training companies and rope access technicians, adhere to these standards to ensure safe and efficient work at height.
                 </div>
@@ -681,32 +682,32 @@ function toggleServiceDetails(service, show) {
     var i;
     var slides = document.getElementsByClassName(className);
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+        slides[i].style.display = "none";
     }
     if (className === 'penetrantSlides') {
         slideIndexPenetrant++;
-        if (slideIndexPenetrant > slides.length) {slideIndexPenetrant = 1}    
-        slides[slideIndexPenetrant-1].style.display = "block";  
+        if (slideIndexPenetrant > slides.length) {slideIndexPenetrant = 1}
+        slides[slideIndexPenetrant-1].style.display = "block";
         setTimeout(function() {showSlides(className);}, 2000); // Change image every 2 seconds
     } else if (className === 'magneticSlides') {
         slideIndexMagnetic++;
-        if (slideIndexMagnetic > slides.length) {slideIndexMagnetic = 1}    
-        slides[slideIndexMagnetic-1].style.display = "block";  
+        if (slideIndexMagnetic > slides.length) {slideIndexMagnetic = 1}
+        slides[slideIndexMagnetic-1].style.display = "block";
         setTimeout(function() {showSlides(className);}, 2000); // Change image every 2 seconds
     } else if (className === 'ultrasonicSlides') {
         slideIndexUltrasonic++;
-        if (slideIndexUltrasonic > slides.length) {slideIndexUltrasonic = 1}    
-        slides[slideIndexUltrasonic-1].style.display = "block";  
+        if (slideIndexUltrasonic > slides.length) {slideIndexUltrasonic = 1}
+        slides[slideIndexUltrasonic-1].style.display = "block";
         setTimeout(function() {showSlides(className);}, 2000); // Change image every 2 seconds
     } else if (className === 'radiographicSlides') {
         slideIndexRadiographic++;
-        if (slideIndexRadiographic > slides.length) {slideIndexRadiographic = 1}    
-        slides[slideIndexRadiographic-1].style.display = "block";  
+        if (slideIndexRadiographic > slides.length) {slideIndexRadiographic = 1}
+        slides[slideIndexRadiographic-1].style.display = "block";
         setTimeout(function() {showSlides(className);}, 2000); // Change image every 2 seconds
     } else if (className === 'irataSlides') {
         slideIndexIRATA++;
-        if (slideIndexIRATA > slides.length) {slideIndexIRATA = 1}    
-        slides[slideIndexIRATA-1].style.display = "block";  
+        if (slideIndexIRATA > slides.length) {slideIndexIRATA = 1}
+        slides[slideIndexIRATA-1].style.display = "block";
         setTimeout(function() {showSlides(className);}, 2000); // Change image every 2 seconds
     }
         // Add similar block for other services if needed
@@ -745,7 +746,7 @@ images.forEach(function(img) {
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
+span.onclick = function() {
   modal.style.display = "none";
 }
 </script>
@@ -753,4 +754,3 @@ span.onclick = function() {
 
 </body>
 </html>
-
