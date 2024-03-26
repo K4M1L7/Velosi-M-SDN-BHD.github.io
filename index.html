@@ -44,7 +44,6 @@
             bottom: 0;
             width: 100%;
         }
-
         .back-to-top {
             position: fixed;
             bottom: 20px;
@@ -57,7 +56,7 @@
             display: none;
         }
         p {
-            border: 2px solid black;
+            border: 3px solid black;
             outline: #4084dd solid 5px;
             margin: auto;  
             padding: 10px;
@@ -71,19 +70,16 @@
             margin: 0 auto; /* Center the container */
             padding: 20px; /* Add some padding */
         }
-
         * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;}
-
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
-
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -99,18 +95,15 @@ img {vertical-align: middle;}
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -121,7 +114,6 @@ img {vertical-align: middle;}
   width: 100%;
   text-align: center;
 }
-
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
@@ -130,7 +122,6 @@ img {vertical-align: middle;}
   position: absolute;
   top: 0;
 }
-
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -142,59 +133,48 @@ img {vertical-align: middle;}
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
 .active, .dot:hover {
   background-color: #717171;
 }
-
 /* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
 }
-
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-
 /*bwh ni utk tab gallery image*/
-
 /* The grid: Four equal columns that floats next to each other */
 .column {
   float: left;
   width: 25%;
   padding: 10px;
 }
-
 /* Style the images inside the grid */
 .column img {
   opacity: 0.5; 
   cursor: pointer; 
 }
-
 .column img:hover {
   opacity: 1;
 }
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
 /* The expanding image container */
 .container {
   position: relative;
   display: none;
 }
-
 /* Expanding image text */
 #imgtext {
   position: absolute;
@@ -203,7 +183,6 @@ img {vertical-align: middle;}
   color: whitesmoke;
   font-size: 20px;
 }
-
 /* Closable button inside the expanded image */
 .closebtn {
   position: absolute;
@@ -213,15 +192,11 @@ img {vertical-align: middle;}
   font-size: 35px;
   cursor: pointer;
 }
-
-
-/* coding bwh ni utk clickable image zoom in */
-
+/* coding bwh ni utk images popup */
 /* Container for the images */
 .image-container {
   text-align: center; /* Center the images horizontally */
 }
-
 /* Individual image styling */
 .image-container img {
   border-radius: 5px;
@@ -230,11 +205,9 @@ img {vertical-align: middle;}
   margin: 0 10px; /* Adjust margin as needed */
   display: inline; /* Make images display inline */
 }
-
 .image-container img:hover {
   opacity: 0.7;
 }
-
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -249,7 +222,6 @@ img {vertical-align: middle;}
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
-
 /* Modal Content (image) */
 .modal-content {
   margin: auto;
@@ -257,7 +229,6 @@ img {vertical-align: middle;}
   width: 80%;
   max-width: 700px;
 }
-
 /* Caption of Modal Image */
 #caption {
   margin: auto;
@@ -269,7 +240,6 @@ img {vertical-align: middle;}
   padding: 10px 0;
   height: 150px;
 }
-
 /* Add Animation */
 .modal-content, #caption {  
   -webkit-animation-name: zoom;
@@ -277,17 +247,14 @@ img {vertical-align: middle;}
   animation-name: zoom;
   animation-duration: 0.6s;
 }
-
 @-webkit-keyframes zoom {
   from {-webkit-transform:scale(0)} 
   to {-webkit-transform:scale(1)}
 }
-
 @keyframes zoom {
   from {transform:scale(0)} 
   to {transform:scale(1)}
 }
-
 /* The Close Button */
 .close {
   position: absolute;
@@ -298,21 +265,18 @@ img {vertical-align: middle;}
   font-weight: bold;
   transition: 0.3s;
 }
-
 .close:hover,
 .close:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
 }
-
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
   .modal-content {
     width: 100%;
   }
 }
-
     </style>
 </head>
 <body>
@@ -328,7 +292,6 @@ img {vertical-align: middle;}
         <a onclick="scrollToSection('Policy')" style="cursor: pointer;">Policy</a>
         <a onclick="scrollToSection('Services')" style="cursor: pointer;">Services</a>
         <a onclick="scrollToSection('Contact')" style="cursor: pointer;">Contact</a>
-
     </nav>
 
     <section id="Home">
@@ -339,26 +302,50 @@ img {vertical-align: middle;}
         Following ISO rules can help companies show they're trustworthy, reach new customers, and make their operations better.
         </div>
         <br>
-        <h2 style="text-align:center">Benefits of ISO</h2>
-        <ul style="background: #3399ff; padding: 15px;">
-        <li style="background: #cce5ff; color: darkblue; margin: 10px;">International, expert consensus on state of the art practices for quality and enviroment management</li>
-        <li style="background: #cce5ff; color: darkblue; margin: 10px;">Common language for dealing with customers and suppliers worldwide</li>
-        <li style="background: #cce5ff; color: darkblue; margin: 10px;">Increase efficiency and effectiveness</li>
-        <li style="background: #cce5ff; color: darkblue; margin: 10px;">Model for continual improvement</li>
-        <li style="background: #cce5ff; color: darkblue; margin: 10px;">Model dor satisfying customers and other stakeholders</li>
-        <li style="background: #cce5ff; color: darkblue; margin: 10px;">Build quality into products and services from design onwards</li>
-        <li style="background: #cce5ff; color: darkblue; margin: 10px;">Address enviromental concerns of customers and public, and comply with government regulations</li>
-        <li style="background: #cce5ff; color: darkblue; margin: 10px;">Integrate with global economy</li>
+        <h2 style="text-align:center">ISO 9001</h2>
+        <div style="text-align:center">ISO 9001 is a global standard that helps organizations ensure they deliver quality products and services consistently.
+        It's about meeting customer needs, improving processes, involving employees, and always striving to do better.
+        Getting certified means proving you're committed to quality.
+        </div>
+        <br>
+        <h2 style="text-align:center">Quality Management Principle</h2>
+        <ul style="background: #00cc7a; padding: 15px;">
+        <h4>Customer focus</h4>
+        <li style="background: #66ffc2; color: black; margin: 10px;">Organization depend on customers and therefore need to understand current and future needs and meet/exceed requirements and expectation.</li>
+        <h4>Leadership</h4>
+        <li style="background: #66ffc2; color: black; margin: 10px;">Leaders establish unity of purpose and provide direction. They also provide an enviroment in which people are involved and objectives are achieved.</li>
+        <h4>Engagement of people</h4>
+        <li style="background: #66ffc2; color: black; margin: 10px;">People are the essence of the organization, full involvement and realization of true potential will maximize benefits of the organization.</li>
+        <h4>Process approach</h4>
+        <li style="background: #66ffc2; color: black; margin: 10px;">Desired results are achieved more efficiently when related resources and activities are managed as a process.</li>
+        <h4>Improvement</h4>
+        <li style="background: #66ffc2; color: black; margin: 10px;">When considered to be a permanent objective helps the organization to go forward.</li>
+        <h4>Evidence-based decision making</h4>
+        <li style="background: #66ffc2; color: black; margin: 10px;">Ensures decision are based on establish and analysed data.</li>
+        <h4>Relationship management</h4>
+        <li style="background: #66ffc2; color: black; margin: 10px;">creates partnership with common goals.</li>
         </ul>
-
+        <br>
+        <h2 style="text-align:center">Benefits of ISO 9001</h2>
+        <ul style="background: #3399ff; padding: 15px;">
+        <li style="background: #cce5ff; color: black; margin: 10px;">International, expert consensus on state of the art practices for quality and enviroment management</li>
+        <li style="background: #cce5ff; color: black; margin: 10px;">Common language for dealing with customers and suppliers worldwide</li>
+        <li style="background: #cce5ff; color: black; margin: 10px;">Increase efficiency and effectiveness</li>
+        <li style="background: #cce5ff; color: black; margin: 10px;">Model for continual improvement</li>
+        <li style="background: #cce5ff; color: black; margin: 10px;">Model dor satisfying customers and other stakeholders</li>
+        <li style="background: #cce5ff; color: black; margin: 10px;">Build quality into products and services from design onwards</li>
+        <li style="background: #cce5ff; color: black; margin: 10px;">Address enviromental concerns of customers and public, and comply with government regulations</li>
+        <li style="background: #cce5ff; color: black; margin: 10px;">Integrate with global economy</li>
+        </ul>
         </div>
     </section>
 
     <section id="Picture">
     <img src="velosi-paka.png" alt="Pejabat di Paka" style="max-width: 30%; height: auto; display: block; margin: 0 auto;">
         <br>
-        <div style="text-align: center;">Pejabat Velosi (M) SDN BHD di Paka
-        </div>
+        <div style="text-align: center;">Pejabat Velosi (M) SDN BHD di Paka</div>
+        <h1 style="text-align: center;">My First Google Map</h1>
+        <div id="map" style="display: block; margin: 0 auto; width:400px;height:400px;background:yellow"></div>
     </section>
 
     <section id="About">
@@ -417,29 +404,28 @@ img {vertical-align: middle;}
         <!-- Slideshow for Policy -->
         <div class="row">
             <div class="column">
-            <img src="Policy1.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
+            <img src="Policy-1.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
             </div>
             <div class="column">
-            <img src="Policy2.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
+            <img src="Policy-2.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
             </div>
             <div class="column">
-            <img src="Policy3.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
+            <img src="Policy-3.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
             </div>
             <div class="column">
-            <img src="Policy4.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
+            <img src="Policy-4.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
             </div>
             <div class="column">
-            <img src="Policy5.jpeg" width="250" height="250" style="display: block; margin-left: 114.5%; margin-right: 114.5%;" onclick="myFunction(this);">
+            <img src="Policy-5.jpeg" width="250" height="250" style="display: block; margin-left: 114.5%; margin-right: 114.5%;" onclick="myFunction(this);">
             </div>
             <div class="column">
-            <img src="Policy6.jpeg" width="250" height="250" style="display: block; margin-left: 114.5%; margin-right: 114.5%;" onclick="myFunction(this);">
+            <img src="Policy-6.jpeg" width="250" height="250" style="display: block; margin-left: 114.5%; margin-right: 114.5%;" onclick="myFunction(this);">
             </div>
         </div>
-
         <div class="container">
         <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-            <img id="expandedImg" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
-            <div id="imgtext"></div>
+        <img id="expandedImg" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
+        <div id="imgtext"></div>
         </div>
         <br>
         <br>
@@ -484,6 +470,7 @@ img {vertical-align: middle;}
                 </div>
                 <br>
                 <br>
+                <div style="text-align: center;">Related video:</div>
                 <a href="https://www.youtube.com/watch?v=qOcOe1Hfrq0&t=41s&ab_channel=XpertEngineeringSolutionSdnBhd" target="_blank">
                 <img src="logo-youtube.jfif" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="125" height="100" alt="YouTube Link"></a>
             </div>
@@ -522,6 +509,7 @@ img {vertical-align: middle;}
                 </div>
                 <br>
                 <br>
+                <div style="text-align: center;">Related video:</div>
                 <a href="https://www.youtube.com/watch?v=6PAERlvMDi8&ab_channel=XpertEngineeringSolutionSdnBhd" target="_blank">
                 <img src="logo-youtube.jfif" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="125" height="100" alt="YouTube Link"></a>
             </div>
@@ -560,6 +548,7 @@ img {vertical-align: middle;}
                 </div>
                 <br>
                 <br>
+                <div style="text-align: center;">Related video:</div>
                 <a href="https://www.youtube.com/watch?v=UM6XKvXWVFA&t=417s&ab_channel=MaterialsScience2000" target="_blank">
                 <img src="logo-youtube.jfif" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="125" height="100" alt="YouTube Link"></a>
             </div>
@@ -601,6 +590,7 @@ img {vertical-align: middle;}
                 </div>
                 <br>
                 <br>
+                <div style="text-align: center;">Related video:</div>
                 <a href="https://www.youtube.com/watch?v=LEvltIo4NTA&t=342s&ab_channel=XpertEngineeringSolutionSdnBhd" target="_blank">
                 <img src="logo-youtube.jfif" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="125" height="100" alt="YouTube Link"></a>
             </div>
@@ -639,6 +629,7 @@ img {vertical-align: middle;}
                 </div>
                 <br>
                 <br>
+                <div style="text-align: center;">Related video:</div>
                 <a href="https://youtube.com/playlist?list=PLtEGk8p77dRQk6Fqpb_Vt4pdCJrwe6415&si=QBYhCtY2SQjQvJpk" target="_blank">
                 <img src="logo-youtube.jfif" style="max-width: 30%; height: auto; display: block; margin: 0 auto;" width="125" height="100" alt="YouTube Link"></a>
             </div>
@@ -694,13 +685,11 @@ img {vertical-align: middle;}
         }
     </script>
 
-
 <script>
 function toggleServiceDetails(service, show) {
     var infoDiv = document.getElementById(service + "-info");
     var showButton = document.querySelector("button[onclick=\"toggleServiceDetails('" + service + "', true)\"]");
     var hideButton = document.querySelector("button[onclick=\"toggleServiceDetails('" + service + "', false)\"]");
-    
     if (show) {
         infoDiv.style.display = "block";
         showButton.style.display = "none";
@@ -713,8 +702,6 @@ function toggleServiceDetails(service, show) {
 }
 </script>
 
-
-
 <script>
     // Initialize slide index for each service
     var slideIndexPenetrant = 0;
@@ -723,7 +710,6 @@ function toggleServiceDetails(service, show) {
     var slideIndexRadiographic = 0;
     var slideIndexIRATA = 0;
     // Add more slide indexes for other services if needed
-
     // Call showSlides function for each service
     showSlides('penetrantSlides');
     showSlides('magneticSlides');
@@ -731,7 +717,6 @@ function toggleServiceDetails(service, show) {
     showSlides('radiographicSlides');
     showSlides('irataSlides');
     // Call showSlides for other services if needed
-
     function showSlides(className) {
     var i;
     var slides = document.getElementsByClassName(className);
@@ -766,7 +751,6 @@ function toggleServiceDetails(service, show) {
     }
         // Add similar block for other services if needed
     }
-
     function showService(serviceName) {
         var serviceInfo = document.getElementById(serviceName + "-info");
         if (serviceInfo.style.display === "none") {
@@ -775,8 +759,6 @@ function toggleServiceDetails(service, show) {
             serviceInfo.style.display = "none";
         }
     }
-
-
     function myFunction(imgs) {
   var expandImg = document.getElementById("expandedImg");
   var imgText = document.getElementById("imgtext");
@@ -789,12 +771,10 @@ function toggleServiceDetails(service, show) {
 <script>
 // Get the modal
 var modal = document.getElementById("myModal");
-
 // Get the images and insert them inside the modal - use their "alt" text as a caption
 var images = document.querySelectorAll("#myImg1, #myImg2, #myImg3");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
-
 images.forEach(function(img) {
   img.onclick = function() {
     modal.style.display = "block";
@@ -802,15 +782,28 @@ images.forEach(function(img) {
     captionText.innerHTML = this.alt;
   }
 });
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
   modal.style.display = "none";
 }
 </script>
+
+
+<script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.12),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoFk2bgZsjPuzxERflOY41F2tQKE8xYy0&callback=myMap"></script>
+
 
 </body>
 </html>
