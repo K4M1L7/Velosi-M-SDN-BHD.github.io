@@ -22,12 +22,12 @@
             background-color: #666;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 25px 0;
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            padding: 0 10px;
+            padding: 0 20px;
         }
         section {
             padding: 20px;
@@ -55,7 +55,7 @@
             cursor: pointer;
             display: none;
         }
-        p {
+        p1 {
             border: 3px solid black;
             outline: #4084dd solid 5px;
             margin: auto;
@@ -234,12 +234,28 @@ img {vertical-align: middle;}
     width: 100%;
   }
 }
+
+.col-container {
+  display: flex; /* Change display property to flex */
+  width: 100%;
+  justify-content: center; /* Align items horizontally in the center */
+
+}
+.col {
+  flex: 1; /* Distribute space equally among columns */
+  padding: 10px;
+  text-align: center; /* Center align text */
+  display: flex; /* Change display property to flex */
+  align-items: center; /* Align items vertically in the center */
+}
+
+
     </style>
 </head>
 <body>
     <header>
         <section id="Panel">
-        <img src="velosi-logo.png" alt="Logo rasmi syarikat" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <img src="velosi-logo.png" alt="Logo rasmi syarikat" style="display: block; margin: 0 auto;" width="150" height="100">
         </section>
     </header>
 
@@ -332,9 +348,22 @@ img {vertical-align: middle;}
         </div>
         <br>
         <br>
-        <br>
-        <p>Velosi has developed a comprehensive Asset Integrity Management software; VAIL-Plant, that can be tailored to fulfill the specific needs of Energy companies worldwide.
+        <h2>Why Choose Velosi</h2>
+        <ul style="background: #7733ff; padding: 5px;">
+        <div class="col-container">
+        <div class="col" style="background: #bb99ff; color: black; margin: 10px;">
+        <p>We provide one stop solution to all your asset integrity requirements, throughout the lifecycle of the facility, with a comprehensive software solution that is tailored to your needs.
         </p>
+        </div>
+        <div class="col" style="background: #bb99ff; color: black; margin: 10px;">
+        <p>Our team comprises of multi discipline engineers and specialist, from around the globe. We have subject matter experts and the right experience to fulfill your requirements.
+        </p>
+        </div>
+        <div class="col" style="background: #bb99ff; color: black; margin: 10px;">
+        <p>We operate globally through our associated offices in Africa, Asia, Europe, & Middle East. Our corporate office is in UK and Head office in UAE (Abu Dhabi). We have associated offices in 86+ countries worldwide. Global vast experience makes us the world’s leading asset integrity providers</p>
+        </div>
+        </div>
+        </ul>
         <br>
         <br>
         <h2>Velosi Certificate</h2>
@@ -364,22 +393,22 @@ img {vertical-align: middle;}
         <!-- Slideshow for Policy -->
         <div class="row">
             <div class="column">
-            <img src="Policy1.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
+            <img src="Policy-1.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
             </div>
             <div class="column">
-            <img src="Policy2.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
+            <img src="Policy-2.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
             </div>
             <div class="column">
-            <img src="Policy3.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
+            <img src="Policy-3.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
             </div>
             <div class="column">
-            <img src="Policy4.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
+            <img src="Policy-4.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
             </div>
             <div class="column">
-            <img src="Policy5.jpeg" width="250" height="250" style="display: block; margin-left: 114.5%; margin-right: 114.5%;" onclick="myFunction(this);">
+            <img src="Policy-5.jpeg" width="250" height="250" style="display: block; margin-left: 114.5%; margin-right: 114.5%;" onclick="myFunction(this);">
             </div>
             <div class="column">
-            <img src="Policy6.jpeg" width="250" height="250" style="display: block; margin-left: 114.5%; margin-right: 114.5%;" onclick="myFunction(this);">
+            <img src="Policy-6.jpeg" width="250" height="250" style="display: block; margin-left: 114.5%; margin-right: 114.5%;" onclick="myFunction(this);">
             </div>
         </div>
         <div class="container">
@@ -613,13 +642,16 @@ img {vertical-align: middle;}
         <br>
         <img src="contactUs.png" alt="Contact Us" width="250" height="250" style="display: block; margin: 0 auto;">
         <br>
-        <p>Phone: +609-8279999</p>
+        <p style="border: 3px solid black; outline: #4084dd solid 5px; margin: auto; padding: 10px; text-align: center;">
+        Phone: +609-8279999</p>
         <br>
         <br>
-        <p>E-mail: info@velosi.com.my</p>
+        <p style="border: 3px solid black; outline: #4084dd solid 5px; margin: auto; padding: 10px; text-align: center;">
+        E-mail: info@velosi.com.my</p>
         <br>
         <br>
-        <p>Address: Plot 234, No. 55, Pusat Niaga Paka, 23100 Paka, Dungun, Terengganu Darul Iman</p>
+        <p style="border: 3px solid black; outline: #4084dd solid 5px; margin: auto; padding: 10px; text-align: center;">
+        Address: Plot 234, No. 55, Pusat Niaga Paka, 23100 Paka, Dungun, Terengganu Darul Iman</p>
         <br>
         <br>
         <br>
