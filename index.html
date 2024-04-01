@@ -249,6 +249,10 @@ img {vertical-align: middle;}
   align-items: center; /* Align items vertically in the center */
 }
 
+#map {
+            height: 400px; /* Adjust height as needed */
+            width: 100%; /* Make map full-width */
+        }
 
     </style>
 </head>
@@ -264,6 +268,7 @@ img {vertical-align: middle;}
         <a onclick="scrollToSection('About')" style="cursor: pointer;">About</a>
         <a onclick="scrollToSection('Policy')" style="cursor: pointer;">Policy</a>
         <a onclick="scrollToSection('Services')" style="cursor: pointer;">Services</a>
+        <a onclick="scrollToSection('Location')" style="cursor: pointer;">Location</a>
         <a onclick="scrollToSection('Contact')" style="cursor: pointer;">Contact</a>
     </nav>
 
@@ -316,23 +321,7 @@ img {vertical-align: middle;}
         </div>
     </section>
 
-    <section id="Picture">
-    <img src="velosi-paka.png" alt="Pejabat di Paka" style="max-width: 30%; height: auto; display: block; margin: 0 auto;">
-        <br>
-        <div style="text-align: center;">Pejabat Velosi (M) SDN BHD di Paka</div>
-    </section>
-
     <section id="About">
-        <br>
-        <br>
-        <h2>Our Vision</h2>
-        <div style="text-align: center;">To become the world’s premier Asset Integrity, HSE & Engineering Consultancy
-        </div>
-        <br>
-        <br>
-        <h2>Our Mission</h2>
-        <div style="text-align: center;">To create value for our clients by providing tailored Asset Integrity, HSE and Engineering Solutions to complex problems through a renowned panel of engineering professionals
-        </div>
         <br>
         <br>
         <h2>About Us</h2>
@@ -348,19 +337,30 @@ img {vertical-align: middle;}
         </div>
         <br>
         <br>
+        <h2>Our Vision</h2>
+        <div style="text-align: center;">To become the world’s premier Asset Integrity, HSE & Engineering Consultancy
+        </div>
+        <br>
+        <br>
+        <h2>Our Mission</h2>
+        <div style="text-align: center;">To create value for our clients by providing tailored Asset Integrity, HSE and Engineering Solutions to complex problems through a renowned panel of engineering professionals
+        </div>
+        <br>
+        <br>
         <h2>Why Choose Velosi</h2>
         <ul style="background: #7733ff; padding: 5px;">
         <div class="col-container">
         <div class="col" style="background: #bb99ff; color: black; margin: 10px;">
-        <p>We provide one stop solution to all your asset integrity requirements, throughout the lifecycle of the facility, with a comprehensive software solution that is tailored to your needs.
-        </p>
+        <p><b>We provide one stop solution to all your asset integrity requirements, throughout the lifecycle of the facility, with a comprehensive software solution that is tailored to your needs.
+        </b></p>
         </div>
         <div class="col" style="background: #bb99ff; color: black; margin: 10px;">
-        <p>Our team comprises of multi discipline engineers and specialist, from around the globe. We have subject matter experts and the right experience to fulfill your requirements.
-        </p>
+        <p><b>Our team comprises of multi discipline engineers and specialist, from around the globe. We have subject matter experts and the right experience to fulfill your requirements.
+        </b></p>
         </div>
         <div class="col" style="background: #bb99ff; color: black; margin: 10px;">
-        <p>We operate globally through our associated offices in Africa, Asia, Europe, & Middle East. Our corporate office is in UK and Head office in UAE (Abu Dhabi). We have associated offices in 86+ countries worldwide. Global vast experience makes us the world’s leading asset integrity providers</p>
+        <p><b>We operate globally through our associated offices in Africa, Asia, Europe, & Middle East. Our corporate office is in UK and Head office in UAE (Abu Dhabi). We have associated offices in 86+ countries worldwide. Global vast experience makes us the world’s leading asset integrity providers
+        </b></p>
         </div>
         </div>
         </ul>
@@ -637,6 +637,18 @@ img {vertical-align: middle;}
         <br>
     </section>
 
+    <section id="Location">
+        <br>
+        <h1 style="text-align:center">Location</h1>
+        <div id="map"></div>
+        <!-- Load Google Maps API -->
+        <br>
+        <img src="velosi-paka.png" alt="Pejabat di Paka" style="max-width: 30%; height: auto; display: block; margin: 0 auto;">
+        <br>
+        <div style="text-align: center;">Velosi (M) SDN BHD's Office at Paka</div>
+
+    </section>
+
     <section id="Contact">
         <br>
         <br>
@@ -784,6 +796,30 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
   modal.style.display = "none";
 }
+</script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoFk2bgZsjPuzxERflOY41F2tQKE8xYy0&callback=initMap" async defer></script>
+
+<script>
+    // Initialize and add the map
+    function initMap() {
+        // The location of Paka, Terengganu
+        var myLatLng = {lat: 4.6360427925962515, lng: 103.43740000034214};
+        
+        // Create the map with specific options
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 8, // Adjust zoom level
+            center: myLatLng // Set center of the map
+        });
+        
+        // Add a marker
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Velosi (M) SDN BHD'
+        });
+    }
 </script>
 
 
