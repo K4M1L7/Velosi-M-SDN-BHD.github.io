@@ -121,44 +121,7 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-/*bwh ni utk tab gallery image*/
-/* The grid: Four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-  padding: 10px;
-}
-/* Style the images inside the grid */
-.column img {
-  opacity: 0.5;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.column img:hover {
-  opacity: 1;
-}
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* The expanding image container */
-.container {
-  position: relative;
-  display: none;
-}
 
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 8px;
-  right: 200px;
-  color: black;
-  font-size: 55px;
-  font-weight: bold;
-  cursor: pointer;
-}
 /* coding bwh ni utk images popup */
 /* Container for the images */
 .image-container {
@@ -171,6 +134,7 @@ img {vertical-align: middle;}
   transition: 0.3s;
   margin: 0 10px; /* Adjust margin as needed */
   display: inline; /* Make images display inline */
+  margin-bottom: 10px;
 }
 .image-container img:hover {
   opacity: 0.3;
@@ -259,7 +223,7 @@ img {vertical-align: middle;}
 <body>
     <header>
         <section id="Panel">
-        <img src="velosi-logo.png" alt="Logo rasmi syarikat" style="display: block; margin: 0 auto;" width="150" height="100">
+        <img src="velosi-logo.png" alt="Logo rasmi syarikat" style="display: block; margin: 0 auto;" width="300" height="200">
         </section>
     </header>
 
@@ -274,7 +238,9 @@ img {vertical-align: middle;}
 
     <section id="Home">
         <div>
-        <img src="ISO.jpeg" alt="International Organization for Standardization (ISO)" width="300" height="250" style="display: block; margin: 0 auto;">
+        <br>
+        <br>
+        <img src="ISO.jpeg" alt="International Organization for Standardization (ISO)" width="150" height="125" style="display: block; margin: 0 auto;">
         <h2 style="text-align:center">International Organization for Standardization (ISO)</h2>
         <div style="text-align:center"> The International Organization for Standardization (ISO) is a worldwide group that makes rules to ensure products and services are safe and good quality.
         These rules cover many areas, like how things are made, how businesses manage the environment, and how they keep information secure.
@@ -282,7 +248,7 @@ img {vertical-align: middle;}
         </div>
         <br>
         <br>
-        <img src="ISO9001.jfif" alt="ISO 9001" width="250" height="250" style="display: block; margin: 0 auto;">
+        <img src="ISO9001.jfif" alt="ISO 9001" width="150" height="150" style="display: block; margin: 0 auto;">
         <h2 style="text-align:center">ISO 9001</h2>
         <div style="text-align:center">ISO 9001 is a global standard that helps organizations ensure they deliver quality products and services consistently.
         It's about meeting customer needs, improving processes, involving employees, and always striving to do better.
@@ -390,31 +356,21 @@ img {vertical-align: middle;}
         <a>Click on the images below to expand it:</a>
         </div>
         <br>
-        <!-- Slideshow for Policy -->
-        <div class="row">
-            <div class="column">
-            <img src="Policy1.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
-            </div>
-            <div class="column">
-            <img src="Policy2.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
-            </div>
-            <div class="column">
-            <img src="Policy3.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
-            </div>
-            <div class="column">
-            <img src="Policy4.jpeg" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;" onclick="myFunction(this);">
-            </div>
-            <div class="column">
-            <img src="Policy5.jpeg" width="250" height="250" style="display: block; margin-left: 114.5%; margin-right: 114.5%;" onclick="myFunction(this);">
-            </div>
-            <div class="column">
-            <img src="Policy6.jpeg" width="250" height="250" style="display: block; margin-left: 114.5%; margin-right: 114.5%;" onclick="myFunction(this);">
-            </div>
+        <div class="image-container">
+        <img id="myImg4" src="Policy-1.jpeg" width="250" height="250" >
+        <img id="myImg5" src="Policy-2.jpeg" width="250" height="250" >
+        <img id="myImg6" src="Policy-3.jpeg" width="250" height="250" >
+        <img id="myImg7" src="Policy-4.jpeg" width="250" height="250" >
+        <img id="myImg8" src="Policy-5.jpeg" width="250" height="250" >
+        <img id="myImg9" src="Policy-6.jpeg" width="250" height="250" >
         </div>
-        <div class="container">
-        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-        <img id="expandedImg" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
-        <div id="imgtext"></div>
+        <br>
+        <br>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
         </div>
         <br>
         <br>
@@ -652,7 +608,7 @@ img {vertical-align: middle;}
     <section id="Contact">
         <br>
         <br>
-        <img src="contactUs.png" alt="Contact Us" width="250" height="250" style="display: block; margin: 0 auto;">
+        <img src="contactUs.png" alt="Contact Us" width="200" height="200" style="display: block; margin: 0 auto;">
         <br>
         <p style="border: 3px solid black; outline: #4084dd solid 5px; margin: auto; padding: 10px; text-align: center;">
         Phone: +609-8279999</p>
@@ -780,7 +736,7 @@ function toggleServiceDetails(service, show) {
 // Get the modal
 var modal = document.getElementById("myModal");
 // Get the images and insert them inside the modal - use their "alt" text as a caption
-var images = document.querySelectorAll("#myImg1, #myImg2, #myImg3");
+var images = document.querySelectorAll("#myImg1, #myImg2, #myImg3, #myImg4, #myImg5, #myImg6, #myImg7, #myImg8, #myImg9");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 images.forEach(function(img) {
