@@ -71,153 +71,122 @@
             padding: 20px; /* Add some padding */
         }
         * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-
-/* coding bwh ni utk images popup */
-/* Container for the images */
-.image-container {
-  text-align: center; /* Center the images horizontally */
-}
-/* Individual image styling */
-.image-container img {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-  margin: 0 10px; /* Adjust margin as needed */
-  display: inline; /* Make images display inline */
-  margin-bottom: 10px;
-}
-.image-container img:hover {
-  opacity: 0.3;
-}
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 15px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-/* Modal Content (image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 500px;
-}
-
-/* Add Animation */
-.modal-content, #caption {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)}
-  to {-webkit-transform:scale(1)}
-}
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
-}
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 5px;
-  right: 200px;
-  color: #f1f1f1;
-  font-size: 70px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
-}
-
-.col-container {
-  display: flex; /* Change display property to flex */
-  width: 100%;
-  justify-content: center; /* Align items horizontally in the center */
-
-}
-.col {
-  flex: 1; /* Distribute space equally among columns */
-  padding: 10px;
-  text-align: center; /* Center align text */
-  display: flex; /* Change display property to flex */
-  align-items: center; /* Align items vertically in the center */
-}
-
+        body {font-family: Verdana, sans-serif; margin:0}
+        .mySlides {display: none}
+        img {vertical-align: middle;}
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+        }
+        /* coding bwh ni utk images popup */
+        /* Container for the images */
+        .image-container {
+            text-align: center; /* Center the images horizontally */
+        }
+        /* Individual image styling */
+        .image-container img {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 0 10px; /* Adjust margin as needed */
+            display: inline; /* Make images display inline */
+            margin-bottom: 10px;
+        }
+        .image-container img:hover {
+            opacity: 0.3;
+        }
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 15px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 500px;
+        }
+        /* Add Animation */
+        .modal-content, #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)}
+        to {-webkit-transform:scale(1)}
+        }
+        @keyframes zoom {
+        from {transform:scale(0)}
+        to {transform:scale(1)}
+        }
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 5px;
+            right: 200px;
+            color: #f1f1f1;
+            font-size: 70px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px){
+        .modal-content {
+            width: 100%;
+        }
+        }
+        .col-container {
+            display: flex; /* Change display property to flex */
+            width: 100%;
+            justify-content: center; /* Align items horizontally in the center */
+        }
+        .col {
+            flex: 1; /* Distribute space equally among columns */
+            padding: 10px;
+            text-align: center; /* Center align text */
+            display: flex; /* Change display property to flex */
+            align-items: center; /* Align items vertically in the center */
+        }
 #map {
             height: 400px; /* Adjust height as needed */
             width: 100%; /* Make map full-width */
         }
-
     </style>
 </head>
 <body>
@@ -226,7 +195,6 @@ img {vertical-align: middle;}
         <img src="velosi-logo.png" alt="Logo rasmi syarikat" style="display: block; margin: 0 auto;" width="300" height="200">
         </section>
     </header>
-
     <nav>
         <a onclick="scrollToSection('Home')" style="cursor: pointer;">Home</a>
         <a onclick="scrollToSection('About')" style="cursor: pointer;">About</a>
@@ -235,7 +203,6 @@ img {vertical-align: middle;}
         <a onclick="scrollToSection('Location')" style="cursor: pointer;">Location</a>
         <a onclick="scrollToSection('Contact')" style="cursor: pointer;">Contact</a>
     </nav>
-
     <section id="Home">
         <div>
         <br>
@@ -256,7 +223,7 @@ img {vertical-align: middle;}
         </div>
         <br>
         <h2 style="text-align:center">Quality Management Principle</h2>
-        <ul style="background: #00cc7a; padding: 15px;">
+        <ul style="background: #00cc7a; padding: 15px; border-radius: 25px;">
         <h4>Customer focus</h4>
         <li style="background: #66ffc2; color: black; margin: 10px;">Organization depend on customers and therefore need to understand current and future needs and meet/exceed requirements and expectation.</li>
         <h4>Leadership</h4>
@@ -274,7 +241,7 @@ img {vertical-align: middle;}
         </ul>
         <br>
         <h2 style="text-align:center">Benefits of ISO 9001</h2>
-        <ul style="background: #3399ff; padding: 15px;">
+        <ul style="background: #3399ff; padding: 15px; border-radius: 25px">
         <li style="background: #cce5ff; color: black; margin: 10px;">International, expert consensus on state of the art practices for quality and enviroment management</li>
         <li style="background: #cce5ff; color: black; margin: 10px;">Common language for dealing with customers and suppliers worldwide</li>
         <li style="background: #cce5ff; color: black; margin: 10px;">Increase efficiency and effectiveness</li>
@@ -286,7 +253,6 @@ img {vertical-align: middle;}
         </ul>
         </div>
     </section>
-
     <section id="About">
         <br>
         <br>
@@ -314,17 +280,17 @@ img {vertical-align: middle;}
         <br>
         <br>
         <h2>Why Choose Velosi</h2>
-        <ul style="background: #7733ff; padding: 5px;">
+        <ul style="background: #7733ff; padding: 5px; border-radius: 25px">
         <div class="col-container">
-        <div class="col" style="background: #bb99ff; color: black; margin: 10px;">
+        <div class="col" style="background: #bb99ff; color: black; margin: 10px; border-radius: 25px">
         <p><b>We provide one stop solution to all your asset integrity requirements, throughout the lifecycle of the facility, with a comprehensive software solution that is tailored to your needs.
         </b></p>
         </div>
-        <div class="col" style="background: #bb99ff; color: black; margin: 10px;">
+        <div class="col" style="background: #bb99ff; color: black; margin: 10px; border-radius: 25px">
         <p><b>Our team comprises of multi discipline engineers and specialist, from around the globe. We have subject matter experts and the right experience to fulfill your requirements.
         </b></p>
         </div>
-        <div class="col" style="background: #bb99ff; color: black; margin: 10px;">
+        <div class="col" style="background: #bb99ff; color: black; margin: 10px; border-radius: 25px">
         <p><b>We operate globally through our associated offices in Africa, Asia, Europe, & Middle East. Our corporate office is in UK and Head office in UAE (Abu Dhabi). We have associated offices in 86+ countries worldwide. Global vast experience makes us the world’s leading asset integrity providers
         </b></p>
         </div>
@@ -347,7 +313,6 @@ img {vertical-align: middle;}
         <div id="caption"></div>
         </div>
     </section>
-
     <section id="Policy">
         <br>
         <br>
@@ -375,7 +340,6 @@ img {vertical-align: middle;}
         <br>
         <br>
     </section>
-
     <section id="Services">
         <br>
         <br>
@@ -592,7 +556,6 @@ img {vertical-align: middle;}
         <br>
         <br>
     </section>
-
     <section id="Location">
         <br>
         <h1 style="text-align:center">Location</h1>
@@ -602,9 +565,7 @@ img {vertical-align: middle;}
         <img src="velosi-paka.png" alt="Pejabat di Paka" style="max-width: 30%; height: auto; display: block; margin: 0 auto;">
         <br>
         <div style="text-align: center;">Velosi (M) SDN BHD's Office at Paka</div>
-
     </section>
-
     <section id="Contact">
         <br>
         <br>
@@ -625,12 +586,10 @@ img {vertical-align: middle;}
         <br>
         <br>
     </section>
-
     <footer>
         &copy; 2024 Velosi (M) SDN BHD. All rights reserved.
         <div class="back-to-top" onclick="scrollToTop()">Back To Top</div>
     </footer>
-
     <script>
         function scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
@@ -648,7 +607,6 @@ img {vertical-align: middle;}
             }
         }
     </script>
-
 <script>
 function toggleServiceDetails(service, show) {
     var infoDiv = document.getElementById(service + "-info");
@@ -665,7 +623,6 @@ function toggleServiceDetails(service, show) {
     }
 }
 </script>
-
 <script>
     // Initialize slide index for each service
     var slideIndexPenetrant = 0;
@@ -731,7 +688,6 @@ function toggleServiceDetails(service, show) {
   expandImg.parentElement.style.display = "block";
 }
 </script>
-
 <script>
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -753,8 +709,6 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 </script>
-
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoFk2bgZsjPuzxERflOY41F2tQKE8xYy0&callback=initMap" async defer></script>
 
 <script>
@@ -762,13 +716,11 @@ span.onclick = function() {
     function initMap() {
         // The location of Paka, Terengganu
         var myLatLng = {lat: 4.6360427925962515, lng: 103.43740000034214};
-        
         // Create the map with specific options
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 8, // Adjust zoom level
             center: myLatLng // Set center of the map
         });
-        
         // Add a marker
         var marker = new google.maps.Marker({
             position: myLatLng,
@@ -777,7 +729,5 @@ span.onclick = function() {
         });
     }
 </script>
-
-
 </body>
 </html>
